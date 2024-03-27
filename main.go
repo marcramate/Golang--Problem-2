@@ -14,14 +14,10 @@ func maxProChickens(n, k int, poschickens []int) int {
 	for right < n {
 		end := poschickens[right] + k
 		InRange := 0
-		// fmt.Println("poschickens:", end)
-		// fmt.Println("right:", right)
-		// fmt.Println("left:", left)
+		
 		for left < n && poschickens[left] < end {
 			InRange++
 			left++
-			// fmt.Println("InRange:", InRange)
-			// fmt.Println("left:", left)
 		}
 
 		maxChickens = max(maxChickens, InRange)
