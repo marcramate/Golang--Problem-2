@@ -1,25 +1,35 @@
-<!-- 1.func maxProChickens(n, k int, poschickens []int) int
-    n (จำนวนไก่), k (ความยาวหลังคา), poschickens (ตำแหน่งของไก่)
-2. sort.Ints(chickens) // เรียงลำดับตำแหน่งไก่ให้เป็นลำดับเพิ่มขึ้น
-left, right := 0, 0 // ตั้งค่าเริ่มต้นของ left และ right pointer
-maxChickens := 0 // ตั้งค่าเริ่มต้นของจำนวนไก่สูงสุดที่สามารถปกป้องได้    
+# Golang Problem 2: Superman's Chicken Rescue
+### Description:
+* English Version :
+  * In a one-dimensional world, Superman needs to protect chickens from a heavy rainstorm using a roof of limited.
+* Thai Version :
+  *  ในอาเรย์มิติเดียว(โลก1มิติ)  ซูเปอร์แมนจำเป็นต้องปกป้องได้จากพายุฝนโดยใช้หลังค่าที่มีความยาวจำกัด
+## Use Language
+ * Golang 
+## EX.
+* Englist Version : 
+   * Create Function  maxProChickens and used 'sort' module sort the position chickens and find end point that a roof covers. Replace 'n' represents total chickens, 'k' with the lenght and 'poschicken' with position chickens.
+Process loop each position until you reach the position last chicken.
+ * Thai Version :
+   * สร้างฟังก์ชั่น maxProChickens แล้วใช้ module 'sort' เข้ามาช่วยในการเรียงลำดับ และทำการนับตำแหน่งของไก่และหาจุดสิ้นสุดที่หลังคาคลุมถึง โดยจะมีการแทน n ด้วยจำนวนไก่ทั้งหมด k ด้วยความยาว และ poschicken ด้วยตำแหน่งของไก่แต่ละตัว และทำการลูปไปที่ละตำแหน่งจนกว่าจะถึงตำแหน่งของไก่ตัวสุดท้าย
+ที่
+```
+//Example 1
+n1, k1 :=  5, 5
+poschickens1 := []int{2, 5, 10, 12, 15}
+```
 
-for right < n { // วนลูปจนกระทั่ง right ถึงท้ายสุดของ chickens
-		end := chickens[right] + k // คำนวณจุดสิ้นสุดของช่วงที่หลังคาปกป้องได้
-		chickensInRange := 0 // นับจำนวนไก่ในช่วงนี้
-
-	for left < n && chickens[left] < end { // เลื่อน left pointer ไปข้างหน้าเพื่อนับจำนวนไก่ในช่วงปกป้อง
-			chickensInRange++
-			left++
-		}
-
-        maxChickens = max(maxChickens, chickensInRange) // อัปเดตค่า maxChickens ให้เป็นค่ามากสุด
-		right++ // เลื่อน right pointer ไปข้างหน้า
-	}
-
-    	return maxChickens // คืนค่าจำนวนไก่สูงสุดที่สามารถปกป้องได้
-
-
-        
-
- -->
+```
+//Example 2
+n2, k2 :=  6, 10
+poschickens2 := []int{1, 11, 30, 34, 35, 37}
+```
+## Result
+> Example 1
+```
+ Result : Maximum chickens : 2
+ ```
+>  Example 2
+```
+ Result : Maximum chickens : 4
+ ```
