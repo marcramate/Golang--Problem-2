@@ -9,10 +9,10 @@
 ## EX.
 * Englist Version : 
    * Create Function  maxProChickens and used 'sort' module sort the position chickens and find end point that a roof covers. Replace 'n' represents total chickens, 'k' with the lenght and 'poschicken' with position chickens.
-Process loop each position until you reach the position last chicken.
+Process loop each position until you reach the position last chicken and agin loop right until position last chicken and loop left until last position chicken but beyond the position chicken from the right .
  * Thai Version :
    * สร้างฟังก์ชั่น maxProChickens แล้วใช้ module 'sort' เข้ามาช่วยในการเรียงลำดับ และทำการนับตำแหน่งของไก่และหาจุดสิ้นสุดที่หลังคาคลุมถึง โดยจะมีการแทน n ด้วยจำนวนไก่ทั้งหมด k ด้วยความยาว และ poschicken ด้วยตำแหน่งของไก่แต่ละตัว และทำการลูปไปที่ละตำแหน่งจนกว่าจะถึงตำแหน่งของไก่ตัวสุดท้าย
-ที่
+ที่ซูเปอร์แมนสามารถปกป้องได้ โดยการนับไปทางขวาจนกว่าจะถึงตำแหน่งสุดท้ายของไก่ และทำอีกครั้งโดยการเลื่อนไปท้ายซ้ายจนถึงถึงตำแหน่งของไก่ตัวสุดท้ายแต่ไม่เกินตำแหน่งของไก่จากทางขวา
 ```
 //Example 1
 n1, k1 :=  5, 5
